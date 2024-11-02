@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="h-24 flex items-center justify-between max-w-7xl mx-auto px-4">
         {/* LEFT */}
         <div className="md:hidden lg:block w-[20%]">
-          <Link href="/" className="font-bold text-xl text-green-400">
+          <Link href="/" className="font-bold text-xl text-slate-600">
             The Spice Rack
           </Link>
         </div>
