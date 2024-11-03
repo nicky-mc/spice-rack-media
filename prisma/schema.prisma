@@ -4,11 +4,56 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+
+
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("NEXT_PUBLIC_SUPABASE_URL")
+model User {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  username  String @unique
+  avatar    String?
+  cover     String?
+}
+
+model Post {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  desc      String
+}
+
+model Comment {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  desc      String
+}
+
+model Like {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  createdAt DateTime @default(now())
+}
+
+model Follower {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  createdAt DateTime @default(now())
+}
+
+model FollowRequest {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  createdAt DateTime @default(now())
+}
+
+model Block {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  createdAt DateTime @default(now())
+}
+
+model Story {
+  id        String @id @map("_id") @default(auto()) @db.ObjectId
+  createdAt DateTime @default(now())
 }

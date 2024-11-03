@@ -6,14 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "migrate": "dotenv -e .env.local -- npx prisma migrate dev",
     "lint": "next lint"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.7.5",
     "@prisma/client": "^5.15.0",
+    "@supabase/supabase-js": "^2.46.1",
     "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
     "cloudinary": "^2.5.1",
     "daisyui": "^4.12.14",
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.10.0",
     "next": "15.0.0-rc.0",
     "next-cloudinary": "^6.16.0",
     "pg": "^8.13.1",
