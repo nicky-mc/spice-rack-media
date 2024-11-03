@@ -20,10 +20,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <div className="w-full bg-gradient-to-r from-slate-400 to-amber-600 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+          <div className="w-full bg-gradient-to-r from-slate-400 to-amber-200 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
             <Navbar />
           </div>
-          <div className=" bg-gradient-to-r from-slate-500 to-white-200 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+          <div className=" bg-gradient-to-r from-slate-200 to-white-200 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
             {children}
           </div>
         </body>

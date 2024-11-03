@@ -5,7 +5,7 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-gradient-to-r from-slate-400 to-amber-600">
+    <div className="w-full bg-gradient-to-r from-slate-300 to-amber-300">
       {/* Inner Content Container */}
       <div className="h-24 flex items-center justify-between max-w-7xl mx-auto px-4">
         {/* LEFT */}
